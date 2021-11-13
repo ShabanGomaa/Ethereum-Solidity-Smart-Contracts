@@ -1,0 +1,14 @@
+truffle develop
+truffle develop --log
+under truffle(develop): migrate --compile-all --reset
+under truffle(develop): migrate --compile-all
+
+truffle migrate  --compile--all --reset --network shaban_network
+/////////////////
+truffle console --network shaban_network
+EmployeeContract.deployed().then(function(instance){app=instance})
+app.getName()
+web3.eth.getAccounts()
+app.setEmployeeName('Shaban Gomaa Ali',{from:'0x5BC68a094c456eE7e0c2bA8B3d86bAeF026f3361'})
+gas used * gas price (in ether) = balance in ether to be paid
+//////////////////

@@ -1,5 +1,6 @@
-const HDWalletProvider = require('@truffle/hdwallet-provider');
-const privateKeys = ['0xf5473e67ee7e6cebb8ad1ab2908a5cf7254fa684a5952994d8301d18d0ffcd46'];
+// const HDWalletProvider = require('@truffle/hdwallet-provider');
+// const privateKeys = ['0xf5473e67ee7e6cebb8ad1ab2908a5cf7254fa684a5952994d8301d18d0ffcd46'];
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -37,6 +38,13 @@ module.exports = {
    */
 
   networks: {
+
+    shaban_network: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+    },
+
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
@@ -74,16 +82,16 @@ module.exports = {
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
 
-    bsc: {
-      provider: () => new HDWalletProvider(privateKeys, `https://bsc-dataseed.binance.org/`),
-      network_id: 56,   // This network is yours, in the cloud.
-      production: true    // Treats this network as if it was a public net. (default: false)
-    },
-    bscTestnet: {
-      provider: () => new HDWalletProvider(privateKeys, `https://data-seed-prebsc-1-s1.binance.org:8545/`),
-      network_id: 97,   // This network is yours, in the cloud.
-      skipDryRun: true    // Treats this network as if it was a public net. (default: false)
-    }
+    // bsc: {
+    //   provider: () => new HDWalletProvider(privateKeys, `https://bsc-dataseed.binance.org/`),
+    //   network_id: 56,   // This network is yours, in the cloud.
+    //   production: true    // Treats this network as if it was a public net. (default: false)
+    // },
+    // bscTestnet: {
+    //   provider: () => new HDWalletProvider(privateKeys, `https://data-seed-prebsc-1-s1.binance.org:8545/`),
+    //   network_id: 97,   // This network is yours, in the cloud.
+    //   skipDryRun: true    // Treats this network as if it was a public net. (default: false)
+    // }
   },
 
   // Set default mocha options here, use special reporters etc.
